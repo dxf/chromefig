@@ -1,6 +1,6 @@
 #! /bin/zsh
 clear
-echo "chromefig 0.0.1 by Dafydd Furnham"
+echo "chromefig 0.0.1 part 1 by Dafydd Furnham"
 echo "........................................."
 echo "Uninstalling Chrome..."
 sudo rm -rf "/Applications/Google Chrome.app"
@@ -13,14 +13,4 @@ echo ""
 echo "Reinstalling Chrome..."
 sudo /usr/sbin/installer -pkg googlechrome.pkg -target /
 xattr -rc "/Applications/Google Chrome.app"
-echo "Enforcing Guest Mode"
-defaults write com.google.Chrome BrowserGuestModeEnforced "<true />"
-echo ""
-echo "Disabling adding new profiles"
-defaults write com.google.Chrome BrowserAddPersonEnabled "<false />"
-echo ""
-echo "Disabling browser sign-in"
-defaults write com.google.Chrome BrowserSignin 0
-echo ""
-echo ""
-echo "Done!"
+echo "Done! Please run chromefig_part2.sh as the shared user to apply browser policies"

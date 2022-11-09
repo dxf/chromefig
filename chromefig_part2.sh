@@ -1,0 +1,12 @@
+echo "chromefig 0.0.1 part 2 by Dafydd Furnham"
+echo "........................................."
+echo "Enforcing Guest Mode"
+defaults write com.google.Chrome BrowserGuestModeEnforced "<true />"
+echo ""
+echo "Disabling adding new profiles"
+defaults write com.google.Chrome BrowserAddPersonEnabled "<false />"
+echo ""
+echo "Disabling browser sign-in"
+defaults write com.google.Chrome BrowserSignin 0
+echo ""
+echo "Done!"
